@@ -28,7 +28,7 @@ public class Main {
       }
       System.out.println("0. 종료");
 
-      // 선택한 메뉴 숫자에 따라 메뉴 출력 또는 프로그램 종료
+      // 선택한 메뉴 정보 출력 또는 프로그램 종료
       System.out.print("원하시는 메뉴를 선택해주세요. : ");
       int menuNum = sc.nextInt();
       if (menuNum == 0) {
