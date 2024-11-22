@@ -20,7 +20,7 @@ public class Main {
       System.out.println("[ BURGERS MENU ]");
       for (int i = 0; i < menuItemList.size(); i++) {
         System.out.printf(
-            "%d. %-12s\t|\tW %.1f\t|\t%s\n",
+            "%d. %-12s | W %.1f | %s\n",
             i + 1,
             menuItemList.get(i).name,
             menuItemList.get(i).price,
@@ -34,7 +34,11 @@ public class Main {
       if (menuNum == 0) {
         System.exit(0);
       } else if (menuNum >= 1 && menuNum <= 4) {
-        System.out.printf("선택하신 메뉴는 %s 입니다.\n\n", menuItemList.get(menuNum - 1).name);
+        System.out.printf(
+            "선택한 메뉴 : %-12s | W %.1f | %s\n\n",
+            menuItemList.get(menuNum - 1).name,
+            menuItemList.get(menuNum - 1).price,
+            menuItemList.get(menuNum - 1).description);
       } else {
         System.out.println("존재하지 않는 메뉴입니다. 다시 선택해주세요.");
       }

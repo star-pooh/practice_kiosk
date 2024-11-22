@@ -1,5 +1,6 @@
 package level3;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,8 +28,14 @@ public class Kiosk {
 
       // 선택한 메뉴 정보 출력 또는 프로그램 종료
       System.out.print("원하시는 메뉴를 선택해주세요. : ");
-      int menuNum = sc.nextInt();
-      selectMenu(menuNum);
+
+      try {
+        int menuNum = sc.nextInt();
+        selectMenu(menuNum);
+      } catch (InputMismatchException e) {
+        System.out.println("메뉴와 일치하는 숫자만 입력해주십시오.");
+        sc.nextLine();
+      }
     }
   }
 
@@ -37,7 +44,7 @@ public class Kiosk {
     System.out.println("[ BURGERS MENU ]");
     for (int i = 0; i < this.menuItemList.size(); i++) {
       System.out.printf(
-          "%d. %-12s\t|\tW %.1f\t|\t%s\n",
+          "%d. %-12s | W %.1f | %s\n",
           i + 1,
           this.menuItemList.get(i).name,
           this.menuItemList.get(i).price,
@@ -55,7 +62,11 @@ public class Kiosk {
     if (menuNum == 0) {
       System.exit(0);
     } else if (menuNum >= 1 && menuNum <= 4) {
-      System.out.printf("선택하신 메뉴는 %s 입니다.\n\n", this.menuItemList.get(menuNum - 1).name);
+      System.out.printf(
+          "선택한 메뉴 : %-12s | W %.1f | %s\n\n",
+          menuItemList.get(menuNum - 1).name,
+          menuItemList.get(menuNum - 1).price,
+          menuItemList.get(menuNum - 1).description);
     } else {
       System.out.println("존재하지 않는 메뉴입니다. 다시 선택해주세요.");
     }

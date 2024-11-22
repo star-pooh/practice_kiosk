@@ -18,10 +18,10 @@ public class Main {
       // 선택한 메뉴 정보 출력 또는 프로그램 종료
       switch (menuNum) {
         case 0 -> System.exit(0);
-        case 1 -> System.out.println("선택하신 메뉴는 ShackBurger 입니다.");
-        case 2 -> System.out.println("선택하신 메뉴는 SmokeShack 입니다.");
-        case 3 -> System.out.println("선택하신 메뉴는 Cheeseburger 입니다.");
-        case 4 -> System.out.println("선택하신 메뉴는 Hamburger 입니다.");
+        case 1 -> System.out.println("선택한 메뉴 : ShackBurger   | W 6.9 | 토마토, 양상추, 쉑소스가 토핑된 치즈버거");
+        case 2 -> System.out.println("선택한 메뉴 : SmokeShack    | W 8.9 | 베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거");
+        case 3 -> System.out.println("선택한 메뉴 : Cheeseburger  | W 6.9 | 포테이토 번과 비프패티, 치즈가 토핑된 치즈버거");
+        case 4 -> System.out.println("선택한 메뉴 : Hamburger     | W 5.4 | 비프패티를 기반으로 야채가 들어간 기본버거");
         default -> System.out.println("존재하지 않는 메뉴입니다. 다시 선택해주세요.");
       }
       System.out.println();
