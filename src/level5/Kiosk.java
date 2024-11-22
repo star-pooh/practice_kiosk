@@ -1,4 +1,4 @@
-package level4;
+package level5;
 
 import java.util.InputMismatchException;
 import java.util.List;
@@ -7,9 +7,9 @@ import java.util.Scanner;
 /** 메뉴 관리 및 사용자 입력 처리 클래스 */
 public class Kiosk {
   // 전체 메뉴
-  Menu menu;
+  private final Menu menu;
 
-  Kiosk(Menu menu) {
+  public Kiosk(Menu menu) {
     this.menu = menu;
   }
 
@@ -102,7 +102,8 @@ public class Kiosk {
 
     for (MenuItem menuItem : menuItemList) {
       System.out.printf(
-          "%d. %-12s | W %.1f | %s\n", idx++, menuItem.name, menuItem.price, menuItem.description);
+          "%d. %-12s | W %.1f | %s\n",
+          idx++, menuItem.getName(), menuItem.getPrice(), menuItem.getDescription());
     }
   }
 
@@ -113,6 +114,7 @@ public class Kiosk {
    */
   private void printSelectedMenu(MenuItem menuItem) {
     System.out.printf(
-        "선택한 메뉴 : %-12s | W %.1f | %s\n\n", menuItem.name, menuItem.price, menuItem.description);
+        "선택한 메뉴 : %-12s | W %.1f | %s\n\n",
+        menuItem.getName(), menuItem.getPrice(), menuItem.getDescription());
   }
 }
