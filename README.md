@@ -132,6 +132,34 @@
 >
 > DessertMenu.java : 디저트 메뉴 관리 클래스
 
+#### self_feedback
+
+- new_level2와 같은 기능
+- 적절한 리팩토링이 목표(기능에 맞는 코드 분리 및 패키지, 클래스 관리)
+
+> > Main.java : 메뉴 / 콘솔 입출력 / 장바구니 객체 생성, 키오스크 객체 생성 및 객체 주입, 프로그램 시작
+>
+> service 패키지
+> > KioskService.java : 사용자 입력에 따른 전체 흐름 관리
+>>
+> >CartService.java : 장바구니 관련 기능 처리 (추가, 삭제, 주문)
+>
+> util 패키지
+> > DisplayConsole.java : 콘솔 입출력 관리 클래스
+>>
+>> CustomerType.java : 구매자 신분 관리 및 주문 요금 할인 관리
+>
+> dto 패키지
+> > MenuItem.java : 개별 메뉴를 관리하기 위한 클래스
+>>
+> > BurgerMenu.java : 햄버거 메뉴 관리 클래스
+>>
+> > DrinkMenu.java : 음료 메뉴 관리 클래스
+>>
+> > DessertMenu.java : 디저트 메뉴 관리 클래스
+>>
+> > Menu.java : 전체 메뉴를 관리하기 위한 클래스
+
 <br>
 
 #### 만들면서 신경썼던 점
